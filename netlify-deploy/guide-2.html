@@ -318,7 +318,7 @@ p.hero-sub:last-of-type {
 .sec-head {
   display: flex;
   align-items: baseline;
-  gap: 16px;
+  gap: 8px;
   margin-bottom: 14px;
 }
 
@@ -332,6 +332,15 @@ p.hero-sub:last-of-type {
   opacity: .5;
   flex-shrink: 0;
   font-variant-numeric: tabular-nums;
+}
+
+.sec-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+  align-self: center;
 }
 
 h2.sec-title {
@@ -834,15 +843,14 @@ footer {
     <ol>
       <li><a href="#s1"><span class="toc-num">01</span>הקמת הארגון</a></li>
       <li><a href="#s2"><span class="toc-num">02</span>בדיקת <bdi>Primary Owner</bdi></a></li>
-      <li><a href="#s3"><span class="toc-num">03</span>מדוע לצרף כתובת <bdi>Gmail?</bdi></a></li>
-      <li><a href="#s4"><span class="toc-num">04</span>הוספת דומיין מורשה</a></li>
+      <li><a href="#s3"><span class="toc-num">03</span>מדוע כדאי לצרף כתובת <bdi>Gmail?</bdi></a></li>
+      <li><a href="#s4"><span class="toc-num">04</span>הוספת דומיין מורשה (<bdi>Gmail</bdi>)</a></li>
       <li><a href="#s5"><span class="toc-num">05</span>בדיקת <bdi>Invite link</bdi> והזמנות</a></li>
       <li><a href="#s6"><span class="toc-num">06</span>הזמנת המשתמש</a></li>
-      <li><a href="#s7"><span class="toc-num">07</span>בחירת תפקיד</a></li>
-      <li><a href="#s8"><span class="toc-num">08</span>קבלת ההזמנה</a></li>
-      <li><a href="#s9"><span class="toc-num">09</span>מעבר בין <bdi>Personal</bdi> ל-<bdi>Team</bdi></a></li>
-      <li><a href="#s10"><span class="toc-num">10</span>כיבוי <bdi>Rate chats</bdi></a></li>
-      <li><a href="#closing"><span class="toc-num">11</span>עצירה בסוף מדריך 2</a></li>
+      <li><a href="#s7"><span class="toc-num">07</span>קבלת ההזמנה</a></li>
+      <li><a href="#s8"><span class="toc-num">08</span>מעבר בין <bdi>Personal</bdi> ל-<bdi>Team</bdi></a></li>
+      <li><a href="#s9"><span class="toc-num">09</span>כיבוי <bdi>Rate chats</bdi></a></li>
+      <li><a href="#closing"><span class="toc-num">10</span>עצירה בסוף מדריך 2</a></li>
     </ol>
   </nav>
 
@@ -851,10 +859,11 @@ footer {
     <section class="sec" id="s1">
       <div class="sec-head">
         <span class="sec-num">1</span>
-        <h2 class="sec-title">1. הקמת הארגון</h2>
+        <span class="sec-dot"></span>
+        <h2 class="sec-title">הקמת הארגון</h2>
       </div>
       <div class="sec-body">
-        <p>יוצר הארגון חייב להשתמש בכתובת דוא"ל עסקית. כתובות ציבוריות כמו <bdi>Gmail</bdi> אינן מתאימות ליצירת הארגון, אך ניתן להוסיף אותן מאוחר יותר כדומיינים מורשים עבור חברים אחרים.</p>
+        <p>יוצר הארגון חייב להשתמש בכתובת דוא"ל עסקית (<bdi>Domain</bdi> שלכם). כתובות ציבוריות כמו <bdi>Gmail</bdi> אינן מתאימות ליצירת הארגון, אך ניתן להוסיף אותן מאוחר יותר כדומיינים מורשים עבור מושבים נוספים.</p>
         <p>בחרו שם ארגון ברור שהמשתמשים יזהו מיד. שם כללי מקשה לזהות אם עובדים ב-<bdi>Personal</bdi> או בסביבת המשרד.</p>
         <p>במסך הרכישה בדקו:</p>
         <ul class="bullets">
@@ -878,7 +887,8 @@ footer {
     <section class="sec" id="s2">
       <div class="sec-head">
         <span class="sec-num">2</span>
-        <h2 class="sec-title">2. בדיקת <bdi>Primary Owner</bdi></h2>
+        <span class="sec-dot"></span>
+        <h2 class="sec-title">בדיקת <bdi>Primary Owner</bdi></h2>
       </div>
       <div class="sec-body">
         <p>עברו אל:</p>
@@ -902,7 +912,8 @@ footer {
     <section class="sec" id="s3">
       <div class="sec-head">
         <span class="sec-num">3</span>
-        <h2 class="sec-title">3. מדוע לצרף כתובת <bdi>Gmail?</bdi></h2>
+        <span class="sec-dot"></span>
+        <h2 class="sec-title">מדוע כדאי לצרף כתובת <bdi>Gmail?</bdi></h2>
       </div>
       <div class="sec-body">
         <p>הוספת <bdi>Gmail</bdi> נדרשת כאשר האדם שצריך להצטרף ל-<bdi>Team</bdi> משתמש בכתובת <bdi>Gmail</bdi>, או כאשר חשבון <bdi>Free, Pro</bdi> או <bdi>Max</bdi> שממנו רוצים להעביר שיחות ופרויקטים כבר מחובר לכתובת זו.</p>
@@ -917,7 +928,8 @@ footer {
     <section class="sec" id="s4">
       <div class="sec-head">
         <span class="sec-num">4</span>
-        <h2 class="sec-title">4. הוספת דומיין מורשה</h2>
+        <span class="sec-dot"></span>
+        <h2 class="sec-title">הוספת דומיין מורשה (<bdi>Gmail</bdi>)</h2>
       </div>
       <div class="sec-body">
         <p>עברו אל:</p>
@@ -945,11 +957,12 @@ footer {
     <section class="sec" id="s5">
       <div class="sec-head">
         <span class="sec-num">5</span>
-        <h2 class="sec-title">5. בדיקת <bdi>Invite link</bdi> והזמנות בין חברים</h2>
+        <span class="sec-dot"></span>
+        <h2 class="sec-title">בדיקת <bdi>Invite link</bdi> והזמנות בין חברים</h2>
       </div>
       <div class="sec-body">
         <p>בארגוני <bdi>Team</bdi> חדשים, <bdi>Invite link</bdi> והזמנות בין חברים מופעלים כברירת מחדל.</p>
-        <p>כאשר <bdi>gmail.com</bdi> מופיע כדומיין מורשה, <bdi>Legal Mind</bdi> ממליצה:</p>
+        <p><bdi>Invite link</bdi> פעיל מאפשר לכל מי שמחזיק בקישור להצטרף לארגון בעצמו, ללא בדיקה או אישור פרטני של מנהל. כאשר <bdi>gmail.com</bdi> מופיע כדומיין מורשה, הסיכון גדל - כל מי שיש לו כתובת <bdi>Gmail</bdi> וגישה לקישור עשוי להצטרף. משום כך, <bdi>Legal Mind</bdi> ממליצה:</p>
         <div class="callout">
           <ul class="bullets">
             <li>לכבות <bdi>Invite link</bdi>, אלא אם הוחלט להשתמש בו.</li>
@@ -971,7 +984,8 @@ footer {
     <section class="sec" id="s6">
       <div class="sec-head">
         <span class="sec-num">6</span>
-        <h2 class="sec-title">6. הזמנת המשתמש</h2>
+        <span class="sec-dot"></span>
+        <h2 class="sec-title">הזמנת המשתמש</h2>
       </div>
       <div class="sec-body">
         <p>עברו אל:</p>
@@ -993,33 +1007,8 @@ footer {
     <section class="sec" id="s7">
       <div class="sec-head">
         <span class="sec-num">7</span>
-        <h2 class="sec-title">7. בחירת תפקיד</h2>
-      </div>
-      <div class="sec-body">
-        <div class="tbl-wrap">
-          <table class="tbl">
-            <thead>
-              <tr><th>אדם</th><th>תפקיד מומלץ בדרך כלל</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>עורך דין שכיר</td><td><bdi>User</bdi></td></tr>
-              <tr><td>מתמחה</td><td><bdi>User</bdi></td></tr>
-              <tr><td>מנהלת משרד המשתמשת ב-<bdi>Claude</bdi></td><td><bdi>User</bdi></td></tr>
-              <tr><td>מנהל תפעול שמוסיף ומסיר משתמשים</td><td><bdi>Admin</bdi></td></tr>
-              <tr><td>שותף המנהל חיוב ומושבים</td><td><bdi>Owner</bdi></td></tr>
-              <tr><td>בעל המשרד או החשבון הארגוני הראשי</td><td><bdi>Primary Owner</bdi></td></tr>
-              <tr><td>ספק חיצוני</td><td><bdi>User</bdi>, או <bdi>Admin</bdi> זמני רק כשנדרש</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p>העניקו לכל אדם את ההרשאה הנמוכה ביותר שמאפשרת לו לבצע את עבודתו.</p>
-      </div>
-    </section>
-
-    <section class="sec" id="s8">
-      <div class="sec-head">
-        <span class="sec-num">8</span>
-        <h2 class="sec-title">8. קבלת ההזמנה</h2>
+        <span class="sec-dot"></span>
+        <h2 class="sec-title">קבלת ההזמנה</h2>
       </div>
       <div class="sec-body">
         <p>המשתמש פותח את ההזמנה, בודק את שם הארגון ונכנס באמצעות אותה כתובת שאליה נשלחה ההזמנה.</p>
@@ -1041,10 +1030,11 @@ footer {
       </div>
     </section>
 
-    <section class="sec" id="s9">
+    <section class="sec" id="s8">
       <div class="sec-head">
-        <span class="sec-num">9</span>
-        <h2 class="sec-title">9. מעבר בין <bdi>Personal</bdi> ל-<bdi>Team</bdi></h2>
+        <span class="sec-num">8</span>
+        <span class="sec-dot"></span>
+        <h2 class="sec-title">מעבר בין <bdi>Personal</bdi> ל-<bdi>Team</bdi></h2>
       </div>
       <div class="sec-body">
         <p>לחצו על השם או ראשי התיבות בפינה השמאלית התחתונה. סימון כחול מציין איזו סביבה פעילה.</p>
@@ -1062,10 +1052,11 @@ footer {
       </div>
     </section>
 
-    <section class="sec" id="s10">
+    <section class="sec" id="s9">
       <div class="sec-head">
-        <span class="sec-num">10</span>
-        <h2 class="sec-title">10. כיבוי <bdi>Rate chats</bdi></h2>
+        <span class="sec-num">9</span>
+        <span class="sec-dot"></span>
+        <h2 class="sec-title">כיבוי <bdi>Rate chats</bdi></h2>
       </div>
       <div class="sec-body">
         <p><bdi>Owner</bdi> או <bdi>Primary Owner</bdi> יעברו אל:</p>
@@ -1078,7 +1069,8 @@ footer {
 
     <section class="sec" id="closing">
       <div class="sec-head">
-        <span class="sec-num">11</span>
+        <span class="sec-num">10</span>
+        <span class="sec-dot"></span>
         <h2 class="sec-title">עצירה בסוף מדריך 2</h2>
       </div>
       <div class="sec-body">

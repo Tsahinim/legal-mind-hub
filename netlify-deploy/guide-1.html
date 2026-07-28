@@ -319,7 +319,7 @@ p.hero-sub:last-of-type {
 .sec-head {
   display: flex;
   align-items: baseline;
-  gap: 16px;
+  gap: 8px;
   margin-bottom: 14px;
 }
 
@@ -333,6 +333,15 @@ p.hero-sub:last-of-type {
   opacity: .5;
   flex-shrink: 0;
   font-variant-numeric: tabular-nums;
+}
+
+.sec-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+  align-self: center;
 }
 
 h2.sec-title {
@@ -827,6 +836,7 @@ footer {
     <span class="eyebrow"><span class="dot"></span><bdi>מדריך 1 מתוך 3</bdi></span>
     <h1 class="hero-title">לפני המעבר למנוי <bdi dir="ltr">Team</bdi> ב-<bdi dir="ltr">Claude</bdi>: מה משתנה ומה חייבים לגבות</h1>
     <p class="hero-kicker">למי מיועד המדריך?</p>
+    <p class="hero-sub"><b>מטרת <bdi>Legal Mind</bdi> היא להנגיש חומר מקצועי לעורכי דין ולמשרדי עורכי דין. תוכן מדריך זה אינו מהווה בשום פנים ואופן ייעוץ משפטי, ואינו תחליף להתייעצות עם גורם מוסמך בתוך המשרד או מחוצה לו. <bdi>Legal Mind</bdi> אינה אחראית להחלטות שיתקבלו על בסיס המדריך.</b></p>
     <p class="hero-sub">המדריך מיועד לעורכי דין, למשרדי עורכי דין ולצוותים משפטיים המשתמשים ב-<bdi>Claude Free, Pro</bdi> או <bdi>Max</bdi> ורוצים לעבור למסגרת <bdi>Claude Team</bdi> בלי לסגור את החשבון הישן מוקדם מדי ובלי לאבד נכסי עבודה.</p>
     <p class="hero-sub">המטרה אינה רק לרכוש מנוי נוסף. המעבר משנה את המסגרת החוזית, את ניהול המשתמשים ואת השליטה במידע. לכן הוא דורש החלטה מקצועית, גיבוי ובדיקת מוכנות.</p>
   </div>
@@ -836,8 +846,8 @@ footer {
   <nav class="toc-card" aria-label="תוכן העניינים">
     <h4>תוכן העניינים</h4>
     <ol>
-      <li><a href="#s1"><span class="toc-num">01</span>מנוי צרכני לעומת מסגרת מסחרית</a></li>
-      <li><a href="#s2"><span class="toc-num">02</span>מה מעניקה המסגרת המסחרית?</a></li>
+      <li><a href="#s1"><span class="toc-num">01</span>מנוי צרכני לעומת מנוי ביזנסיילי</a></li>
+      <li><a href="#s2"><span class="toc-num">02</span>מה מעניק המנוי הביזנסיילי (<bdi>Team</bdi>) לעורכי דין?</a></li>
       <li><a href="#s3"><span class="toc-num">03</span>מושבים, מחיר ובעלות</a></li>
       <li><a href="#s4"><span class="toc-num">04</span>אל תסגרו את החשבון הישן</a></li>
       <li><a href="#s5"><span class="toc-num">05</span><bdi>Export data</bdi> הוא גיבוי, לא מנגנון הייבוא</a></li>
@@ -852,11 +862,13 @@ footer {
     <section class="sec" id="s1">
       <div class="sec-head">
         <span class="sec-num">1</span>
-        <h2 class="sec-title">1. מנוי צרכני לעומת מסגרת מסחרית</h2>
+        <span class="sec-dot"></span>
+        <h2 class="sec-title">מנוי צרכני לעומת מנוי ביזנסיילי</h2>
       </div>
       <div class="sec-body">
-        <p><bdi>Free, Pro</bdi> ו-<bdi>Max</bdi> הם מסלולים אישיים. <bdi>Max</bdi> מעניק יותר שימוש, אך אינו הופך את החשבון למסגרת ארגונית.</p>
-        <p><bdi>Team</bdi> הוא <bdi>Claude for Work</bdi>. הוא כולל ניהול ארגוני, חיוב מרוכז, תפקידים והרשאות ומסגרת מסחרית של <bdi>Anthropic</bdi>.</p>
+        <p><bdi>Free, Pro</bdi> ו-<bdi>Max</bdi> הם מסלולים צרכניים. אמנם <bdi>מקס</bdi> מעניק מכסת שימוש גדולה יותר, אך אינו הופך את המנוי למנוי ביזנסיילי.</p>
+        <p><bdi>Team</bdi> הוא מנוי ביזנסיילי (<bdi>Team</bdi>), הכולל ניהול ארגוני, חיוב מרוכז, תפקידים והרשאות, לרבות <bdi>DPA</bdi> (התחייבויות של <bdi>Anthropic</bdi> כלפי המשתמשים בנוגע לפרטיות המידע - יורחב בסעיף 2 להלן).</p>
+        <p>ראו בפירוט <a href="https://claude.com/pricing" target="_blank" rel="noopener">באתר של Anthropic</a>.</p>
 
         <h3 class="h2">עמדת <bdi>Legal Mind</bdi></h3>
         <div class="callout">
@@ -864,24 +876,21 @@ footer {
         </div>
 
         <h3 class="h2">ומה לגבי <bdi>Enterprise</bdi>?</h3>
-        <p><bdi>Enterprise</bdi> הוא מסלול מסחרי מתקדם לארגונים הזקוקים לבקרות רחבות יותר. סדרה זו מתמקדת במעבר של משרד קטן או בינוני ל-<bdi>Team</bdi>.</p>
+        <p><bdi>Enterprise</bdi> הוא מסלול מסחרי מתקדם לארגונים אשר להם יש צרכים ארגוניים נוספים. סדרה זו מתמקדת במעבר ממנוי צרכני (<bdi>Pro</bdi> או <bdi>Max</bdi>) למנוי ביזנסיילי (<bdi>Team</bdi>).</p>
       </div>
     </section>
 
     <section class="sec" id="s2">
       <div class="sec-head">
         <span class="sec-num">2</span>
-        <h2 class="sec-title">2. מה מעניקה המסגרת המסחרית?</h2>
+        <span class="sec-dot"></span>
+        <h2 class="sec-title">מה מעניק המנוי הביזנסיילי (<bdi>Team</bdi>) לעורכי דין?</h2>
       </div>
       <div class="sec-body">
-        <h3 class="h2">תנאים מסחריים ו-<bdi>DPA</bdi></h3>
-        <p>ה-<bdi>DPA</bdi> של <bdi>Anthropic</bdi> משולב בתנאים המסחריים. כאשר ארגון מקבל את התנאים המסחריים, הוא מקבל גם את ה-<bdi>DPA</bdi>.</p>
-        <p>במסגרת <bdi>Claude for Work</bdi>:</p>
-        <ul class="bullets">
-          <li>הארגון הוא בעל השליטה במידע של משתמשיו.</li>
-          <li><bdi>Anthropic</bdi> פועלת כמעבד מידע עבור הארגון.</li>
-          <li>ה-<bdi>Primary Owner</bdi> מנהל את סביבת העבודה ויכול לבקש <bdi>Export</bdi> ארגוני.</li>
-        </ul>
+        <h3 class="h2"><bdi>DPA</bdi></h3>
+        <p><bdi>DPA</bdi> (<bdi>Data Processing Addendum</bdi>) הן ההתחייבויות החוזיות של <bdi>Anthropic</bdi> כלפי המשתמשים, בנוגע לאופן שבו היא מטפלת במידע שהם מזינים. ה-<bdi>DPA</bdi> משולב אוטומטית בתנאים המסחריים - ארגון שמקבל את התנאים המסחריים של <bdi>Anthropic</bdi> מקבל עמם גם את ה-<bdi>DPA</bdi>, בלי צורך בחתימה נפרדת.</p>
+        <p>מתוך ה-<bdi>DPA</bdi> הרשמי של <bdi>Anthropic</bdi>: "ה-<bdi>DPA</bdi> של <bdi>Anthropic</bdi> משולב אוטומטית בתנאים המסחריים שלנו... כאשר אתם מקבלים את התנאים המסחריים של <bdi>Anthropic</bdi>, אתם מקבלים גם את ה-<bdi>DPA</bdi> שלנו" (במקור: <bdi dir="ltr">"Anthropic's DPA...is automatically incorporated into our Commercial Terms of Service...when you accept Anthropic's Commercial Terms of Service, you also accept our DPA."</bdi>).</p>
+        <p>ראו את נוסח ה-<bdi>DPA</bdi> המלא <a href="https://privacy.claude.com/en/articles/7996862-how-do-i-view-and-sign-your-data-processing-addendum-dpa" target="_blank" rel="noopener">באתר Anthropic</a>. הסבר זה אינו תחליף לקריאת נוסח ה-<bdi>DPA</bdi> המלא.</p>
 
         <h3 class="h2">אימון מודלים</h3>
         <p>כברירת מחדל, <bdi>Anthropic</bdi> אינה משתמשת בקלט ובפלט של מוצריה המסחריים לאימון המודלים.</p>
@@ -892,23 +901,18 @@ footer {
           <p><code dir="ltr">Organization settings &gt; Data and Privacy &gt; Rate chats</code></p>
         </div>
 
-        <h3 class="h2"><bdi>Team</bdi> אינו מחליף מדיניות משרדית</h3>
-        <p>לפני שימוש בחומר לקוח, המשרד צריך לקבוע לפחות:</p>
-        <ul class="bullets">
-          <li>מי רשאי להזין מידע.</li>
-          <li>אילו סוגי מידע אסור להזין.</li>
-          <li>כיצד מצמצמים פרטים מזהים.</li>
-          <li>מי רשאי לחבר <bdi>Connectors</bdi>.</li>
-          <li>מי בודק תוצר לפני שימוש משפטי.</li>
-          <li>כיצד מטפלים בעובד או בספק שעוזב.</li>
-        </ul>
+        <h3 class="h2">עמדת <bdi>Legal Mind</bdi></h3>
+        <div class="callout">
+          <p>המשתמש הראשי (<bdi>Primary Owner</bdi>) צריך לקבוע מדיניות משרדית לגבי המשתמשים - למשל מי רשאי להזין מידע, ומי רשאי לחבר <bdi>Connectors</bdi>.</p>
+        </div>
       </div>
     </section>
 
     <section class="sec" id="s3">
       <div class="sec-head">
         <span class="sec-num">3</span>
-        <h2 class="sec-title">3. מושבים, מחיר ובעלות</h2>
+        <span class="sec-dot"></span>
+        <h2 class="sec-title">מושבים, מחיר ובעלות</h2>
       </div>
       <div class="sec-body">
         <p><bdi>Team</bdi> מיועד כיום לארגונים של 2 עד 150 משתמשים.</p>
@@ -942,13 +946,13 @@ footer {
     <section class="sec" id="s4">
       <div class="sec-head">
         <span class="sec-num">4</span>
-        <h2 class="sec-title">4. אל תסגרו את החשבון הישן</h2>
+        <span class="sec-dot"></span>
+        <h2 class="sec-title">אל תסגרו את החשבון הישן</h2>
       </div>
       <div class="sec-body">
         <p>יצירת <bdi>Team</bdi> יוצרת סביבת ארגון חדשה. החשבון הצרכני אינו נסגר אוטומטית.</p>
-        <p>בשלב ההצטרפות בחרו:</p>
+        <p>בשלב ההצטרפות למנוי, לאחר שיצרתם את מנוי <bdi>Team</bdi>, תקפוץ הודעה מתוך <bdi>Claude</bdi> ותלחצו על:</p>
         <p><code dir="ltr">Keep both accounts</code></p>
-        <p>כך ניתן לבדוק את <bdi>Team</bdi>, להשלים גיבויים ולוודא שהמשתמש יודע לעבור בין <bdi>Personal</bdi> לבין <bdi>Team</bdi>.</p>
 
         <div class="callout warn">
           <span class="callout-label">אזהרה</span>
@@ -966,7 +970,8 @@ footer {
     <section class="sec" id="s5">
       <div class="sec-head">
         <span class="sec-num">5</span>
-        <h2 class="sec-title">5. <bdi>Export data</bdi> הוא גיבוי, לא מנגנון הייבוא</h2>
+        <span class="sec-dot"></span>
+        <h2 class="sec-title"><bdi>Export data</bdi> הוא גיבוי, לא מנגנון הייבוא</h2>
       </div>
       <div class="sec-body">
         <p>בחשבון <bdi>Free, Pro</bdi> או <bdi>Max</bdi>:</p>
@@ -978,7 +983,7 @@ footer {
         </figure>
 
         <p>לאחר שהבקשה מוכנה מתקבל קישור בדוא"ל. הקישור תקף ל-24 שעות מרגע קבלתו, ודורש שהמשתמש יהיה מחובר.</p>
-        <p>קובץ <bdi>Export</bdi> אינו מיועד לייבוא לחשבון <bdi>Claude</bdi> אחר. הוא גיבוי לפני פעולה חד-כיוונית. מסלול ההעברה הרשמי ל-<bdi>Team</bdi> הוא <code dir="ltr">Bring your data with you</code>.</p>
+        <p>קובץ <bdi>Export</bdi> אינו מיועד לייבוא לחשבון <bdi>Claude</bdi> אחר. הוא גיבוי לפני פעולה חד-כיוונית. מסלול ההעברה הרשמי ל-<bdi>Team</bdi> הוא <code dir="ltr">Bring your data with you</code> (ראו מדריך 3, שם מפורט התהליך המלא).</p>
 
         <h3 class="h2">בדיקת הגיבוי</h3>
         <p>אל תסתפקו בלחיצה על <bdi>Export</bdi>. ודאו ש:</p>
@@ -999,10 +1004,11 @@ footer {
     <section class="sec" id="s6">
       <div class="sec-head">
         <span class="sec-num">6</span>
-        <h2 class="sec-title">6. <bdi>Custom Skills</bdi> אינם עוברים למנוי החדש באמצעים הרשמיים של <bdi>Anthropic</bdi></h2>
+        <span class="sec-dot"></span>
+        <h2 class="sec-title"><bdi>Custom Skills</bdi> אינם עוברים למנוי החדש באמצעים הרשמיים של <bdi>Anthropic</bdi></h2>
       </div>
       <div class="sec-body">
-        <p><bdi>Custom Skills</bdi> הם כל סקיל שאינו אחד הסקילים הרשמיים שאנתרופיק עצמה בונה ומספקת מראש (כמו הסקילים לעבודה עם <bdi>PowerPoint, Excel, Word</bdi> ו-<bdi>PDF</bdi>) - כלומר כל סקיל שהמשתמש עצמו כתב או התקין ממקור חיצוני. ניתן לראות אילו <bdi>Custom Skills</bdi> מותקנים כרגע בחשבון תחת <bdi dir="ltr">Settings &gt; Features</bdi>.</p>
+        <p><bdi>Custom Skills</bdi> הם כל סקיל שאינו אחד הסקילים הרשמיים שאנתרופיק עצמה בונה ומספקת מראש (כמו הסקילים לעבודה עם <bdi>PowerPoint, Excel, Word</bdi> ו-<bdi>PDF</bdi>) - כלומר כל סקיל שהמשתמש עצמו כתב או התקין ממקור חיצוני. ניתן לראות אילו <bdi>Custom Skills</bdi> מותקנים כרגע בחשבון תחת <bdi dir="ltr">Settings &gt; Customize</bdi>.</p>
 
         <p>מסלול ההעברה הרשמי והסופי למנוי <bdi>Team</bdi> נקרא <bdi>Bring your data with you</bdi>, ומוסבר בהרחבה במדריך 3. <bdi>Custom Skills</bdi> אינם ברשימת הפריטים שהוא מעביר.</p>
 
@@ -1361,10 +1367,10 @@ audit-manifests/
         </figure>
 
         <h3 class="h2">מה לשמור במחשב?</h3>
-        <p>לכל <bdi>Skill</bdi> שמרו:</p>
+        <p>לאחר שהזנו את <bdi>Claude</bdi> ב-<bdi>Prompt</bdi>, ולאחר ש-<bdi>Claude</bdi> ייבא לנו את הקבצים הרלוונטיים, עלינו לשמור אותם במחשב - ולדעת באיזו צורה לשמור אותם. לכל <bdi>Skill</bdi> יש לשמור:</p>
         <ul class="bullets">
-          <li><bdi>Restore ZIP</bdi> נקי.</li>
-          <li><bdi>BACKUP-MANIFEST</bdi> נפרד.</li>
+          <li><bdi>Restore ZIP</bdi> נקי - מאפשר לשחזר את ה-<bdi>Skill</bdi> עצמו בעתיד.</li>
+          <li><bdi>BACKUP-MANIFEST</bdi> נפרד - מתעד את כל הקבצים וההפניות (<bdi>references</bdi>) ששייכים ל-<bdi>Skill</bdi>.</li>
           <li>עותק של קובץ ההוראות המרכזי.</li>
           <li>תיעוד של חיבורים חיצוניים והרשאות שיידרשו לאחר המעבר.</li>
         </ul>
@@ -1374,7 +1380,8 @@ audit-manifests/
     <section class="sec" id="s7">
       <div class="sec-head">
         <span class="sec-num">7</span>
-        <h2 class="sec-title">7. נכסים נוספים שיש לתעד</h2>
+        <span class="sec-dot"></span>
+        <h2 class="sec-title">נכסים נוספים שיש לתעד</h2>
       </div>
       <div class="sec-body">
         <p>לפני המעבר עברו על:</p>
@@ -1387,13 +1394,14 @@ audit-manifests/
           <li><bdi>Claude Code cloud sessions</bdi>.</li>
           <li><bdi>Custom Instructions</bdi>, אם קיימות בחשבון.</li>
         </ul>
-        <p>העתיקו או שמרו כל רכיב שאינו מופיע במפורש ברשימת המידע שיעבור.</p>
+        <p>העתיקו או שמרו כל רכיב רלוונטי לחשבון שלכם מתוך הרשימה הנ"ל, שאתם מעוניינים שיופיע ברשימת המידע שיעבור.</p>
       </div>
     </section>
 
     <section class="sec" id="closing">
       <div class="sec-head">
         <span class="sec-num">8</span>
+        <span class="sec-dot"></span>
         <h2 class="sec-title">נקודת עצירה בסוף מדריך 1</h2>
       </div>
       <div class="sec-body">
