@@ -221,6 +221,47 @@
     .masthead-tag { display: none; }
     .masthead-logo { height: 100px; }
   }
+
+/* מקרא צילומי מסך - עיגול ממוספר, בלי תבליט, RTL תקין */
+.shot-legend {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0; }
+
+.shot-legend li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 8px 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink); }
+
+.shot-legend li > b {
+  flex: 0 0 24px;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  margin-top: 2px;
+  border-radius: 50%;
+  background: var(--brand);
+  color: #fff;
+  font-family: 'Assistant', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1; }
+
+.shot-legend li > span {
+  flex: 1 1 auto; }
+
+/* כיתוב מתחת לצילום אמיתי - קודם עוצב רק בתוך image-placeholder */
+figure > figcaption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--ink-faint);
+  text-align: center; }
+
 </style>
 </head>
 <body>
@@ -235,8 +276,8 @@
 <div class="hero">
   <div class="hero-mesh" aria-hidden="true"></div>
   <div class="hero-inner">
-    <span class="hero-eyebrow"><span class="dot"></span>מרכז מדריכים דיגיטלי</span>
-    <h1>מרכז המדריכים למעבר בטוח למנוי <bdi dir="ltr">Team</bdi> של <bdi dir="ltr">Claude</bdi></h1>
+    <span class="hero-eyebrow"><span class="dot"></span>מרכז המדריכים</span>
+    <h1>מדריך מפורט למעבר בטוח למנוי <bdi dir="ltr">Team</bdi> של <bdi dir="ltr">Claude</bdi></h1>
     <p>ליווי מלא לפני המעבר, במהלכו ואחריו - מהכנה וגיבוי, דרך העברת החשבון והמידע, ועד בדיקות ושחזור <bdi dir="ltr">Skills</bdi>.</p>
   </div>
 </div>

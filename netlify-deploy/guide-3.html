@@ -819,6 +819,47 @@ footer {
     margin: 18mm 15mm;
   }
 }
+
+/* מקרא צילומי מסך - עיגול ממוספר, בלי תבליט, RTL תקין */
+.shot-legend {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0; }
+
+.shot-legend li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 8px 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink); }
+
+.shot-legend li > b {
+  flex: 0 0 24px;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  margin-top: 2px;
+  border-radius: 50%;
+  background: var(--brand);
+  color: #fff;
+  font-family: 'Assistant', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1; }
+
+.shot-legend li > span {
+  flex: 1 1 auto; }
+
+/* כיתוב מתחת לצילום אמיתי - קודם עוצב רק בתוך image-placeholder */
+figure > figcaption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--ink-faint);
+  text-align: center; }
+
 </style>
 </head>
 <body>
@@ -982,13 +1023,13 @@ footer {
       <div class="sec-body">
         <p>לפי התיעוד העדכני של <bdi>Anthropic</bdi>:</p>
         <ul class="bullets">
-          <li><bdi>Chats</bdi>.</li>
+          <li><bdi>Chats</bdi></li>
           <li><bdi>Artifacts</bdi> בתוך שיחות.</li>
           <li><bdi>Projects, Project instructions</bdi> וקבצי <bdi>Project</bdi>.</li>
           <li>פרויקטים שנוצרו או שימשו ב-<bdi>Cowork</bdi>.</li>
-          <li><bdi>Uploaded files and attachments</bdi>.</li>
-          <li><bdi>Tasks</bdi>.</li>
-          <li><bdi>Project sync configurations</bdi>.</li>
+          <li><bdi>Uploaded files and attachments</bdi></li>
+          <li><bdi>Tasks</bdi></li>
+          <li><bdi>Project sync configurations</bdi></li>
           <li><bdi>Memory</bdi>, אם הארגון לא כיבה אותה.</li>
           <li>חלק מהגדרות <bdi>Claude Code</bdi>, בכפוף להגדרות שכבר קיימות בארגון.</li>
         </ul>
@@ -1011,15 +1052,15 @@ footer {
       </div>
       <div class="sec-body">
         <ul class="bullets">
-          <li><bdi>Custom Skills</bdi>.</li>
+          <li><bdi>Custom Skills</bdi></li>
           <li>התחברויות לאפליקציות ולשירותים.</li>
           <li><bdi>Custom Connectors</bdi> שהמשתמש הוסיף.</li>
-          <li><bdi>Published Artifacts</bdi>.</li>
+          <li><bdi>Published Artifacts</bdi></li>
           <li>קישורי שיתוף ציבוריים.</li>
           <li>הזמנות שיתוף ממתינות.</li>
           <li><bdi>Cowork tasks</bdi> והיסטוריית <bdi>session</bdi>.</li>
           <li>מידע מקומי ש-<bdi>Cowork</bdi> שמר במחשב.</li>
-          <li><bdi>Claude Code cloud sessions</bdi>.</li>
+          <li><bdi>Claude Code cloud sessions</bdi></li>
         </ul>
         <p>קראו וצילמו את הרשימה שמופיעה בחשבון שלכם. הממשק והתיעוד עשויים להשתנות.</p>
 
@@ -1104,7 +1145,7 @@ footer {
           <li>שיחה הכוללת מסמך.</li>
           <li>שיחה הכוללת תמונה.</li>
           <li><bdi>Project</bdi> חשוב.</li>
-          <li><bdi>Project instructions</bdi>.</li>
+          <li><bdi>Project instructions</bdi></li>
           <li>שיחה מתוך <bdi>Your chats</bdi> בפרויקט.</li>
         </ul>
         <p>הופעת כותרת אינה מוכיחה שהתוכן והקבצים זמינים. פתחו אותם בפועל.</p>
@@ -1127,27 +1168,57 @@ footer {
         <h2 class="sec-title">בדיקת קבצים</h2>
       </div>
       <div class="sec-body">
-        <p>הורידו מדגם:</p>
-        <ul class="bullets">
-          <li><bdi>DOCX</bdi>.</li>
-          <li><bdi>PDF</bdi>.</li>
-          <li>תמונה.</li>
-          <li><bdi>HTML</bdi> או קובץ גדול.</li>
-        </ul>
-        <p>פתחו מחוץ ל-<bdi>Claude</bdi> והשוו למקור.</p>
+        <p>עד כאן בדקתם שהשיחות והפרויקטים הגיעו. עכשיו בודקים את הקבצים עצמם, וזו בדיקה נפרדת - מהסיבה שמוסברת בתיבה שבהמשך הפרק.</p>
 
-        <p>בדקו במיוחד:</p>
+        <h3 class="h2">שלב א: בוחרים ארבעה קבצים לבדיקה</h3>
+
+        <p>אין צורך לעבור על הכול. בחרו קובץ אחד מכל סוג, ועדיף שיהיו מהמורכבים שיש לכם:</p>
         <ul class="bullets">
-          <li>טבלאות.</li>
-          <li>הערות שוליים.</li>
-          <li>מספור עמודים.</li>
-          <li>נספחים.</li>
-          <li>חתימות.</li>
-          <li>עימוד.</li>
-          <li>עברית ואנגלית.</li>
-          <li><bdi>Track Changes</bdi>, כאשר הוא חשוב.</li>
+          <li>מסמך <bdi>Word</bdi> - רצוי כזה שיש בו טבלה או הערות שוליים.</li>
+          <li>קובץ <bdi>PDF</bdi> - רצוי סרוק או חתום.</li>
+          <li>תמונה - צילום מסך או מסמך מצולם.</li>
+          <li>קובץ כבד או ארוך במיוחד, מכל סוג שהוא.</li>
         </ul>
-        <p>תצוגת טקסט בתוך <bdi>Claude</bdi> אינה מוכיחה שהקובץ המקורי הומר או אבד.</p>
+
+        <h3 class="h2">שלב ב: מורידים ופותחים מחוץ ל-<bdi>Claude</bdi></h3>
+
+        <p>הורידו כל אחד מהם למחשב, ופתחו אותו בתוכנה שבה אתם עובדים איתו בדרך כלל: <bdi>Word</bdi> למסמך, קורא <bdi>PDF</bdi> לקובץ <bdi>PDF</bdi>. אל תסתפקו בתצוגה שבתוך <bdi>Claude</bdi>.</p>
+
+        <p>הניחו לצידו את הקובץ המקורי - זה שנשמר בגיבוי שהכנתם במדריך 1 - והשוו ביניהם.</p>
+
+        <h3 class="h2">שלב ג: מה בדיוק משווים</h3>
+
+        <p>בכל קובץ עברו על שבע הנקודות האלה. הן אלה שנשברות ראשונות:</p>
+
+        <div class="tbl-wrap">
+          <table class="tbl">
+            <thead>
+              <tr><th>מה בודקים</th><th>מה מחפשים</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>הפורמט של הקובץ</td><td>האם הוא חזר כמסמך <bdi>Word</bdi> או <bdi>PDF</bdi> כפי שהועלה, או שהוא חזר כקובץ טקסט מסוג אחר. בדקו את סיומת הקובץ.</td></tr>
+              <tr><td>טבלאות</td><td>האם השורות והעמודות נשמרו, או שהתוכן נמרח לשורה אחת רציפה.</td></tr>
+              <tr><td>הערות שוליים</td><td>האם הן קיימות, ואם כן - האם המספור שלהן עדיין מצביע למקום הנכון.</td></tr>
+              <tr><td>עימוד ומספור עמודים</td><td>האם מספר העמודים זהה למקור. שינוי בעימוד משנה כל הפניה לעמוד.</td></tr>
+              <tr><td>נספחים וחתימות</td><td>האם הם נמצאים בקובץ, ובעיקר בקובצי <bdi>PDF</bdi> סרוקים.</td></tr>
+              <tr><td>עברית ואנגלית באותו מסמך</td><td>האם שורות מעורבות התהפכו או התפרקו.</td></tr>
+              <tr><td><bdi>Track Changes</bdi></td><td>רק כאשר הוא מהותי למסמך: האם השינויים והתגובות עדיין שם.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout warn">
+          <span class="callout-label">למה לא מספיק להסתכל על הקובץ בתוך <bdi>Claude</bdi></span>
+          <p>כאשר <bdi>Claude</bdi> מציג את תוכן הקובץ בתוך השיחה, הוא מציג <strong>טקסט שחולץ ממנו</strong> - ולא את הקובץ עצמו. הטקסט יכול להיראות מלא ותקין גם כאשר המסמך אינו זמין עוד בפורמט שבו העליתם אותו.</p>
+          <p><strong>לכן ההוראה היא להוריד ולפתוח בחוץ.</strong> זו הדרך היחידה לדעת אם בידיכם מסמך עובד או רק תמליל שלו.</p>
+        </div>
+
+        <div class="callout warn">
+          <span class="callout-label">אם מצאתם פער</span>
+          <p>אל תתקנו בתוך <bdi>Claude</bdi>. הקובץ התקין נמצא בגיבוי שהכנתם לפני המעבר. העלו אותו מחדש מהגיבוי אל ה-<bdi>Project</bdi> המתאים, ורשמו את המקרה. אם הוא חוזר על עצמו בסוג מסוים של קבצים, כדאי לדעת זאת לפני שממשיכים.</p>
+          <p><strong>זו הסיבה שמדריך 1 דורש גיבוי מלא לפני שנוגעים בכלום.</strong></p>
+        </div>
+
       </div>
     </section>
 

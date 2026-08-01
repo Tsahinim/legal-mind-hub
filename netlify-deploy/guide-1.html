@@ -820,6 +820,47 @@ footer {
     margin: 18mm 15mm;
   }
 }
+
+/* מקרא צילומי מסך - עיגול ממוספר, בלי תבליט, RTL תקין */
+.shot-legend {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0; }
+
+.shot-legend li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 8px 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink); }
+
+.shot-legend li > b {
+  flex: 0 0 24px;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  margin-top: 2px;
+  border-radius: 50%;
+  background: var(--brand);
+  color: #fff;
+  font-family: 'Assistant', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1; }
+
+.shot-legend li > span {
+  flex: 1 1 auto; }
+
+/* כיתוב מתחת לצילום אמיתי - קודם עוצב רק בתוך image-placeholder */
+figure > figcaption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--ink-faint);
+  text-align: center; }
+
 </style>
 </head>
 <body>
@@ -846,8 +887,8 @@ footer {
   <nav class="toc-card" aria-label="תוכן העניינים">
     <h4>תוכן העניינים</h4>
     <ol>
-      <li><a href="#s1"><span class="toc-num">01</span>מנוי צרכני לעומת מנוי ביזנסיילי</a></li>
-      <li><a href="#s2"><span class="toc-num">02</span>מה מעניק המנוי הביזנסיילי (<bdi>Team</bdi>) לעורכי דין?</a></li>
+      <li><a href="#s1"><span class="toc-num">01</span>מנוי צרכני לעומת מנוי ביזנסיאלי</a></li>
+      <li><a href="#s2"><span class="toc-num">02</span>מה מעניק המנוי הביזנסיאלי (<bdi>Team</bdi>) לעורכי דין?</a></li>
       <li><a href="#s3"><span class="toc-num">03</span>מושבים, מחיר ובעלות</a></li>
       <li><a href="#s4"><span class="toc-num">04</span>אל תסגרו את החשבון הישן</a></li>
       <li><a href="#s5"><span class="toc-num">05</span><bdi>Export data</bdi> הוא גיבוי, לא מנגנון הייבוא</a></li>
@@ -863,11 +904,11 @@ footer {
       <div class="sec-head">
         <span class="sec-num">1</span>
         <span class="sec-dot"></span>
-        <h2 class="sec-title">מנוי צרכני לעומת מנוי ביזנסיילי</h2>
+        <h2 class="sec-title">מנוי צרכני לעומת מנוי ביזנסיאלי</h2>
       </div>
       <div class="sec-body">
-        <p><bdi>Free, Pro</bdi> ו-<bdi>Max</bdi> הם מסלולים צרכניים. אמנם <bdi>מקס</bdi> מעניק מכסת שימוש גדולה יותר, אך אינו הופך את המנוי למנוי ביזנסיילי.</p>
-        <p><bdi>Team</bdi> הוא מנוי ביזנסיילי (<bdi>Team</bdi>), הכולל ניהול ארגוני, חיוב מרוכז, תפקידים והרשאות, לרבות <bdi>DPA</bdi> (התחייבויות של <bdi>Anthropic</bdi> כלפי המשתמשים בנוגע לפרטיות המידע - יורחב בסעיף 2 להלן).</p>
+        <p><bdi>Free, Pro</bdi> ו-<bdi>Max</bdi> הם מסלולים צרכניים. אמנם <bdi>מקס</bdi> מעניק מכסת שימוש גדולה יותר, אך אינו הופך את המנוי למנוי ביזנסיאלי.</p>
+        <p><bdi>Team</bdi> הוא מנוי ביזנסיאלי (<bdi>Team</bdi>), הכולל ניהול ארגוני, חיוב מרוכז, תפקידים והרשאות, לרבות <bdi>DPA</bdi> (התחייבויות של <bdi>Anthropic</bdi> כלפי המשתמשים בנוגע לפרטיות המידע - יורחב בסעיף 2 להלן).</p>
         <p>ראו בפירוט <a href="https://claude.com/pricing" target="_blank" rel="noopener">באתר של Anthropic</a>.</p>
 
         <h3 class="h2">עמדת <bdi>Legal Mind</bdi></h3>
@@ -876,7 +917,7 @@ footer {
         </div>
 
         <h3 class="h2">ומה לגבי <bdi>Enterprise</bdi>?</h3>
-        <p><bdi>Enterprise</bdi> הוא מסלול מסחרי מתקדם לארגונים אשר להם יש צרכים ארגוניים נוספים. סדרה זו מתמקדת במעבר ממנוי צרכני (<bdi>Pro</bdi> או <bdi>Max</bdi>) למנוי ביזנסיילי (<bdi>Team</bdi>).</p>
+        <p><bdi>Enterprise</bdi> הוא מסלול מסחרי מתקדם לארגונים אשר להם יש צרכים ארגוניים נוספים. סדרה זו מתמקדת במעבר ממנוי צרכני (<bdi>Pro</bdi> או <bdi>Max</bdi>) למנוי ביזנסיאלי (<bdi>Team</bdi>).</p>
       </div>
     </section>
 
@@ -884,7 +925,7 @@ footer {
       <div class="sec-head">
         <span class="sec-num">2</span>
         <span class="sec-dot"></span>
-        <h2 class="sec-title">מה מעניק המנוי הביזנסיילי (<bdi>Team</bdi>) לעורכי דין?</h2>
+        <h2 class="sec-title">מה מעניק המנוי הביזנסיאלי (<bdi>Team</bdi>) לעורכי דין?</h2>
       </div>
       <div class="sec-body">
         <h3 class="h2"><bdi>DPA</bdi></h3>
@@ -956,13 +997,14 @@ footer {
 
         <div class="callout warn">
           <span class="callout-label">אזהרה</span>
-          <p>אל תבחרו עדיין:</p>
+          <p>בחלון הזה בחרו <code dir="ltr">Keep both accounts</code> בלבד.</p>
+          <p><strong>שלוש האפשרויות הבאות סוגרות את החשבון האישי שלכם. אל תבחרו בהן, לא עכשיו ולא בהמשך:</strong></p>
           <ul class="bullets">
             <li><code dir="ltr">Use your organization account only</code></li>
             <li><code dir="ltr">Close your personal account</code></li>
-            <li><code dir="ltr">Bring your data with you</code></li>
             <li><code dir="ltr">Start Fresh</code> או <code dir="ltr">Delete your data</code></li>
           </ul>
+          <p><strong>ואפשרות רביעית שדורשת הבהרה נפרדת:</strong> <code dir="ltr">Bring your data with you</code> היא האפשרות שמעבירה בפועל את השיחות, הפרויקטים והקבצים אל <bdi>Team</bdi>. היא נכונה, אבל <strong>לא בשלב הזה.</strong> ההעברה מבוצעת רק אחרי שהארגון הוקם, המשתמשים הוזמנו והגיבוי הושלם, והיא מפורטת במדריך 3. לחיצה עליה כאן תתחיל את ההגירה לפני שהצוות מוכן ולפני שיש לכם גיבוי.</p>
         </div>
       </div>
     </section>
@@ -1386,12 +1428,12 @@ audit-manifests/
       <div class="sec-body">
         <p>לפני המעבר עברו על:</p>
         <ul class="bullets">
-          <li><bdi>Connected apps</bdi>.</li>
-          <li><bdi>Custom Connectors</bdi>.</li>
-          <li><bdi>Published Artifacts</bdi>.</li>
+          <li><bdi>Connected apps</bdi></li>
+          <li><bdi>Custom Connectors</bdi></li>
+          <li><bdi>Published Artifacts</bdi></li>
           <li>קישורי שיתוף ציבוריים.</li>
           <li><bdi>Tasks</bdi> ו-<bdi>Cowork sessions</bdi>.</li>
-          <li><bdi>Claude Code cloud sessions</bdi>.</li>
+          <li><bdi>Claude Code cloud sessions</bdi></li>
           <li><bdi>Custom Instructions</bdi>, אם קיימות בחשבון.</li>
         </ul>
         <p>העתיקו או שמרו כל רכיב רלוונטי לחשבון שלכם מתוך הרשימה הנ"ל, שאתם מעוניינים שיופיע ברשימת המידע שיעבור.</p>

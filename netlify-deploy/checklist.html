@@ -934,6 +934,47 @@ ul.big-checklist li::before {
     font-size: 12.5px;
   }
 }
+
+/* מקרא צילומי מסך - עיגול ממוספר, בלי תבליט, RTL תקין */
+.shot-legend {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0; }
+
+.shot-legend li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 8px 0;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink); }
+
+.shot-legend li > b {
+  flex: 0 0 24px;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  margin-top: 2px;
+  border-radius: 50%;
+  background: var(--brand);
+  color: #fff;
+  font-family: 'Assistant', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1; }
+
+.shot-legend li > span {
+  flex: 1 1 auto; }
+
+/* כיתוב מתחת לצילום אמיתי - קודם עוצב רק בתוך image-placeholder */
+figure > figcaption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--ink-faint);
+  text-align: center; }
+
 </style>
 </head>
 <body>
