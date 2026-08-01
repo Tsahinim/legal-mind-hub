@@ -861,6 +861,31 @@ figure > figcaption {
   color: var(--ink-faint);
   text-align: center; }
 
+
+/* ציטוט מקור: העברית והאנגלית מופרדות, כל אחת בכיוון שלה */
+.quote-he,
+.quote-en {
+  margin: 12px 0;
+  border-inline-start: 3px solid var(--brand);
+  background: var(--brand-wash);
+  padding: 13px 16px;
+  border-radius: 0 8px 8px 0;
+  font-size: 15.5px;
+  line-height: 1.7; }
+
+.quote-en {
+  direction: ltr;
+  text-align: left;
+  border-radius: 8px 0 0 8px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic; }
+
+.quote-src-label {
+  margin: 14px 0 0;
+  color: var(--ink-faint);
+  font-size: 13.5px;
+  font-weight: 700; }
+
 </style>
 </head>
 <body>
@@ -930,7 +955,12 @@ figure > figcaption {
       <div class="sec-body">
         <h3 class="h2"><bdi>DPA</bdi></h3>
         <p><bdi>DPA</bdi> (<bdi>Data Processing Addendum</bdi>) הן ההתחייבויות החוזיות של <bdi>Anthropic</bdi> כלפי המשתמשים, בנוגע לאופן שבו היא מטפלת במידע שהם מזינים. ה-<bdi>DPA</bdi> משולב אוטומטית בתנאים המסחריים - ארגון שמקבל את התנאים המסחריים של <bdi>Anthropic</bdi> מקבל עמם גם את ה-<bdi>DPA</bdi>, בלי צורך בחתימה נפרדת.</p>
-        <p>מתוך ה-<bdi>DPA</bdi> הרשמי של <bdi>Anthropic</bdi>: "ה-<bdi>DPA</bdi> של <bdi>Anthropic</bdi> משולב אוטומטית בתנאים המסחריים שלנו... כאשר אתם מקבלים את התנאים המסחריים של <bdi>Anthropic</bdi>, אתם מקבלים גם את ה-<bdi>DPA</bdi> שלנו" (במקור: <bdi dir="ltr">"Anthropic's DPA...is automatically incorporated into our Commercial Terms of Service...when you accept Anthropic's Commercial Terms of Service, you also accept our DPA."</bdi>).</p>
+        <p>מתוך ה-<bdi>DPA</bdi> הרשמי של <bdi>Anthropic</bdi>:</p>
+
+        <blockquote class="quote-he">"ה-<bdi>DPA</bdi> של <bdi>Anthropic</bdi> משולב אוטומטית בתנאים המסחריים שלנו... כאשר אתם מקבלים את התנאים המסחריים של <bdi>Anthropic</bdi>, אתם מקבלים גם את ה-<bdi>DPA</bdi> שלנו."</blockquote>
+
+        <p class="quote-src-label">הנוסח המקורי באנגלית:</p>
+        <blockquote class="quote-en" dir="ltr">"Anthropic's DPA...is automatically incorporated into our Commercial Terms of Service...when you accept Anthropic's Commercial Terms of Service, you also accept our DPA."</blockquote>
         <p>ראו את נוסח ה-<bdi>DPA</bdi> המלא <a href="https://privacy.claude.com/en/articles/7996862-how-do-i-view-and-sign-your-data-processing-addendum-dpa" target="_blank" rel="noopener">באתר Anthropic</a>. הסבר זה אינו תחליף לקריאת נוסח ה-<bdi>DPA</bdi> המלא.</p>
 
         <h3 class="h2">אימון מודלים</h3>
