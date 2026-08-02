@@ -233,8 +233,8 @@ p.hero-sub:last-of-type {
   margin: 0 auto;
   padding: 20px 28px 56px;
   display: grid;
-  grid-template-columns: 230px minmax(0,1fr);
-  gap: 40px;
+  grid-template-columns: 290px minmax(0,1fr);
+      gap: 32px;
   align-items: start;
 }
 
@@ -281,9 +281,7 @@ p.hero-sub:last-of-type {
 }
 
 .toc-card li a {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
+      display: block;
   padding: 7px 10px;
   border-radius: 6px;
   text-decoration: none;
@@ -299,6 +297,10 @@ p.hero-sub:last-of-type {
 }
 
 .toc-num {
+  display: inline-block;
+  min-width: 19px;
+  margin-inline-end: 9px;
+  white-space: nowrap;
   font-size: 11.5px;
   color: var(--ink-faint);
   font-variant-numeric: tabular-nums;
@@ -914,7 +916,7 @@ figure > figcaption {
     <h4>תוכן העניינים</h4>
     <ol>
       <li><a href="#s1"><span class="toc-num">01</span>מנוי צרכני לעומת מנוי ביזנסיאלי</a></li>
-      <li><a href="#s2"><span class="toc-num">02</span>מה מעניק המנוי הביזנסיאלי (<bdi>Team</bdi>) לעורכי דין?</a></li>
+      <li><a href="#s2"><span class="toc-num">02</span>מה מעניק המנוי הביזנסיאלי <bdi>(Team)</bdi> לעורכי דין?</a></li>
       <li><a href="#s3"><span class="toc-num">03</span>מושבים, מחיר ובעלות</a></li>
       <li><a href="#s4"><span class="toc-num">04</span>אל תסגרו את החשבון הישן</a></li>
       <li><a href="#s5"><span class="toc-num">05</span><bdi>Export data</bdi> הוא גיבוי, לא מנגנון הייבוא</a></li>
@@ -934,7 +936,7 @@ figure > figcaption {
       </div>
       <div class="sec-body">
         <p><bdi>Free, Pro</bdi> ו-<bdi>Max</bdi> הם מסלולים צרכניים. אמנם <bdi>מקס</bdi> מעניק מכסת שימוש גדולה יותר, אך אינו הופך את המנוי למנוי ביזנסיאלי.</p>
-        <p><bdi>Team</bdi> הוא מנוי ביזנסיאלי (<bdi>Team</bdi>), הכולל ניהול ארגוני, חיוב מרוכז, תפקידים והרשאות, לרבות <bdi>DPA</bdi> (התחייבויות של <bdi>Anthropic</bdi> כלפי המשתמשים בנוגע לפרטיות המידע - יורחב בסעיף 2 להלן).</p>
+        <p><bdi>Team</bdi> הוא מנוי ביזנסיאלי <bdi>(Team)</bdi>, הכולל ניהול ארגוני, חיוב מרוכז, תפקידים והרשאות, לרבות <bdi>DPA</bdi> (התחייבויות של <bdi>Anthropic</bdi> כלפי המשתמשים בנוגע לפרטיות המידע - יורחב בסעיף 2 להלן).</p>
         <p>ראו בפירוט <a href="https://claude.com/pricing" target="_blank" rel="noopener">באתר של Anthropic</a>.</p>
 
         <h3 class="h2">עמדת <bdi>Legal Mind</bdi></h3>
@@ -943,7 +945,7 @@ figure > figcaption {
         </div>
 
         <h3 class="h2">ומה לגבי <bdi>Enterprise</bdi>?</h3>
-        <p><bdi>Enterprise</bdi> הוא מסלול מסחרי מתקדם לארגונים אשר להם יש צרכים ארגוניים נוספים. סדרה זו מתמקדת במעבר ממנוי צרכני (<bdi>Pro</bdi> או <bdi>Max</bdi>) למנוי ביזנסיאלי (<bdi>Team</bdi>).</p>
+        <p><bdi>Enterprise</bdi> הוא מסלול מסחרי מתקדם לארגונים אשר להם יש צרכים ארגוניים נוספים. סדרה זו מתמקדת במעבר ממנוי צרכני (<bdi>Pro</bdi> או <bdi>Max</bdi>) למנוי ביזנסיאלי <bdi>(Team)</bdi>.</p>
       </div>
     </section>
 
@@ -951,11 +953,11 @@ figure > figcaption {
       <div class="sec-head">
         <span class="sec-num">2</span>
         <span class="sec-dot"></span>
-        <h2 class="sec-title">מה מעניק המנוי הביזנסיאלי (<bdi>Team</bdi>) לעורכי דין?</h2>
+        <h2 class="sec-title">מה מעניק המנוי הביזנסיאלי <bdi>(Team)</bdi> לעורכי דין?</h2>
       </div>
       <div class="sec-body">
         <h3 class="h2"><bdi>DPA</bdi></h3>
-        <p><bdi>DPA</bdi> (<bdi>Data Processing Addendum</bdi>) הן ההתחייבויות החוזיות של <bdi>Anthropic</bdi> כלפי המשתמשים, בנוגע לאופן שבו היא מטפלת במידע שהם מזינים. ה-<bdi>DPA</bdi> משולב אוטומטית בתנאים המסחריים - ארגון שמקבל את התנאים המסחריים של <bdi>Anthropic</bdi> מקבל עמם גם את ה-<bdi>DPA</bdi>, בלי צורך בחתימה נפרדת.</p>
+        <p><bdi>DPA</bdi> <bdi>(Data Processing Addendum)</bdi> הן ההתחייבויות החוזיות של <bdi>Anthropic</bdi> כלפי המשתמשים, בנוגע לאופן שבו היא מטפלת במידע שהם מזינים. ה-<bdi>DPA</bdi> משולב אוטומטית בתנאים המסחריים - ארגון שמקבל את התנאים המסחריים של <bdi>Anthropic</bdi> מקבל עמם גם את ה-<bdi>DPA</bdi>, בלי צורך בחתימה נפרדת.</p>
         <p>מתוך ה-<bdi>DPA</bdi> הרשמי של <bdi>Anthropic</bdi>:</p>
 
         <blockquote class="quote-he">"ה-<bdi>DPA</bdi> של <bdi>Anthropic</bdi> משולב אוטומטית בתנאים המסחריים שלנו... כאשר אתם מקבלים את התנאים המסחריים של <bdi>Anthropic</bdi>, אתם מקבלים גם את ה-<bdi>DPA</bdi> שלנו."</blockquote>
@@ -975,7 +977,7 @@ figure > figcaption {
 
         <h3 class="h2">עמדת <bdi>Legal Mind</bdi></h3>
         <div class="callout">
-          <p>המשתמש הראשי (<bdi>Primary Owner</bdi>) צריך לקבוע מדיניות משרדית לגבי המשתמשים - למשל מי רשאי להזין מידע, ומי רשאי לחבר <bdi>Connectors</bdi>.</p>
+          <p>המשתמש הראשי <bdi>(Primary Owner)</bdi> צריך לקבוע מדיניות משרדית לגבי המשתמשים - למשל מי רשאי להזין מידע, ומי רשאי לחבר <bdi>Connectors</bdi>.</p>
         </div>
       </div>
     </section>
@@ -1450,7 +1452,7 @@ audit-manifests/
         <p>לאחר שהזנו את <bdi>Claude</bdi> ב-<bdi>Prompt</bdi>, ולאחר ש-<bdi>Claude</bdi> ייבא לנו את הקבצים הרלוונטיים, עלינו לשמור אותם במחשב - ולדעת באיזו צורה לשמור אותם. לכל <bdi>Skill</bdi> יש לשמור:</p>
         <ul class="bullets">
           <li><bdi>Restore ZIP</bdi> נקי - מאפשר לשחזר את ה-<bdi>Skill</bdi> עצמו בעתיד.</li>
-          <li><bdi>BACKUP-MANIFEST</bdi> נפרד - מתעד את כל הקבצים וההפניות (<bdi>references</bdi>) ששייכים ל-<bdi>Skill</bdi>.</li>
+          <li><bdi>BACKUP-MANIFEST</bdi> נפרד - מתעד את כל הקבצים וההפניות <bdi>(references)</bdi> ששייכים ל-<bdi>Skill</bdi>.</li>
           <li>עותק של קובץ ההוראות המרכזי.</li>
           <li>תיעוד של חיבורים חיצוניים והרשאות שיידרשו לאחר המעבר.</li>
         </ul>

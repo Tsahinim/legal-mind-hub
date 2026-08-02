@@ -232,8 +232,8 @@ p.hero-sub:last-of-type {
   margin: 0 auto;
   padding: 20px 28px 56px;
   display: grid;
-  grid-template-columns: 230px minmax(0,1fr);
-  gap: 40px;
+  grid-template-columns: 290px minmax(0,1fr);
+      gap: 32px;
   align-items: start;
 }
 
@@ -280,9 +280,7 @@ p.hero-sub:last-of-type {
 }
 
 .toc-card li a {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
+      display: block;
   padding: 7px 10px;
   border-radius: 6px;
   text-decoration: none;
@@ -298,6 +296,10 @@ p.hero-sub:last-of-type {
 }
 
 .toc-num {
+  display: inline-block;
+  min-width: 19px;
+  margin-inline-end: 9px;
+  white-space: nowrap;
   font-size: 11.5px;
   color: var(--ink-faint);
   font-variant-numeric: tabular-nums;

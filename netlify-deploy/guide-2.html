@@ -232,8 +232,8 @@ p.hero-sub:last-of-type {
   margin: 0 auto;
   padding: 20px 28px 56px;
   display: grid;
-  grid-template-columns: 230px minmax(0,1fr);
-  gap: 40px;
+  grid-template-columns: 290px minmax(0,1fr);
+      gap: 32px;
   align-items: start;
 }
 
@@ -280,9 +280,7 @@ p.hero-sub:last-of-type {
 }
 
 .toc-card li a {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
+      display: block;
   padding: 7px 10px;
   border-radius: 6px;
   text-decoration: none;
@@ -298,6 +296,10 @@ p.hero-sub:last-of-type {
 }
 
 .toc-num {
+  display: inline-block;
+  min-width: 19px;
+  margin-inline-end: 9px;
+  white-space: nowrap;
   font-size: 11.5px;
   color: var(--ink-faint);
   font-variant-numeric: tabular-nums;
@@ -885,7 +887,7 @@ figure > figcaption {
       <li><a href="#s1"><span class="toc-num">01</span>הקמת הארגון</a></li>
       <li><a href="#s2"><span class="toc-num">02</span>בדיקת <bdi>Primary Owner</bdi></a></li>
       <li><a href="#s3"><span class="toc-num">03</span>מדוע כדאי לצרף כתובת <bdi>Gmail</bdi>?</a></li>
-      <li><a href="#s4"><span class="toc-num">04</span>הוספת דומיין מורשה (<bdi>Gmail</bdi>)</a></li>
+      <li><a href="#s4"><span class="toc-num">04</span>הוספת דומיין מורשה <bdi>(Gmail)</bdi></a></li>
       <li><a href="#s5"><span class="toc-num">05</span>בדיקת <bdi>Invite link</bdi> והזמנות</a></li>
       <li><a href="#s6"><span class="toc-num">06</span>הזמנת המשתמש</a></li>
       <li><a href="#s7"><span class="toc-num">07</span>קבלת ההזמנה</a></li>
@@ -978,7 +980,7 @@ figure > figcaption {
       <div class="sec-head">
         <span class="sec-num">4</span>
         <span class="sec-dot"></span>
-        <h2 class="sec-title">הוספת דומיין מורשה (<bdi>Gmail</bdi>)</h2>
+        <h2 class="sec-title">הוספת דומיין מורשה <bdi>(Gmail)</bdi></h2>
       </div>
       <div class="sec-body">
         <p>עברו אל:</p>
