@@ -280,10 +280,10 @@ p.hero-sub:last-of-type {
 }
 
 .toc-card li a {
-      display: block;
+  display: block;
+  position: relative;
   padding: 7px 10px;
-  padding-inline-end: 38px;
-  text-indent: -28px;
+  padding-inline-start: 40px;
   border-radius: 6px;
   text-decoration: none;
   color: var(--ink-soft);
@@ -298,9 +298,9 @@ p.hero-sub:last-of-type {
 }
 
 .toc-num {
-  display: inline-block;
-  min-width: 19px;
-  margin-inline-end: 9px;
+  position: absolute;
+  inset-inline-start: 12px;
+  top: 9px;
   white-space: nowrap;
   font-size: 11.5px;
   color: var(--ink-faint);
