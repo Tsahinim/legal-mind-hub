@@ -875,8 +875,9 @@ figure > figcaption {
 
 .quote-en {
   direction: ltr;
-  text-align: left;
-  border-radius: 8px 0 0 8px;
+  text-align: right;
+  border-inline-start: 3px solid var(--brand);
+  border-radius: 0 8px 8px 0;
   font-family: Georgia, 'Times New Roman', serif;
   font-style: italic; }
 
@@ -1056,6 +1057,13 @@ figure > figcaption {
 
         <p>לאחר שהבקשה מוכנה מתקבל קישור בדוא"ל. הקישור תקף ל-24 שעות מרגע קבלתו, ודורש שהמשתמש יהיה מחובר.</p>
         <p>קובץ <bdi>Export</bdi> אינו מיועד לייבוא לחשבון <bdi>Claude</bdi> אחר. הוא גיבוי לפני פעולה חד-כיוונית. מסלול ההעברה הרשמי ל-<bdi>Team</bdi> הוא <code dir="ltr">Bring your data with you</code> (ראו מדריך 3, שם מפורט התהליך המלא).</p>
+
+        <div class="callout warn">
+          <span class="callout-label">הקבצים אינם חוזרים בפורמט שבו הועלו</span>
+          <p><strong>מסמכים שהעליתם ל-<bdi>Claude</bdi> כקובצי <bdi>Word</bdi> או <bdi>PDF</bdi> אינם מוחזרים בייצוא בפורמט המקורי שלהם, אלא כקובצי טקסט מסוג <bdi>MD.</bdi></strong></p>
+          <p>המשמעות המעשית לעורך דין: העימוד, הטבלאות, הערות השוליים, החתימות והנספחים אינם נשמרים בקובץ שחוזר. מי שמניח שקיבל גיבוי מלא של המסמכים עצמו - טועה.</p>
+          <p><strong>לכן הגיבוי האמיתי של מסמכי הלקוח אינו הייצוא הזה,</strong> אלא הקבצים המקוריים כפי שהם שמורים אצלכם במשרד. ודאו שהם קיימים ונגישים לפני שמתחילים במעבר. הייצוא משמש לגיבוי השיחות וההקשר, לא להחזרת המסמכים.</p>
+        </div>
 
         <h3 class="h2">בדיקת הגיבוי</h3>
         <p>אל תסתפקו בלחיצה על <bdi>Export</bdi>. ודאו ש:</p>
