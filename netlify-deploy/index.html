@@ -195,6 +195,16 @@
   .path-name { font-size: 13.1px; color: var(--ink-soft); white-space: nowrap; }
   .path-line { width: 56px; height: 2px; background: linear-gradient(90deg, var(--brand-bright), var(--line-strong)); margin: 0 6px; align-self: flex-start; margin-top: 17px; }
 
+  .companion-section { max-width: 900px; margin: 56px auto 0; padding: 0 28px; }
+  .companion-card {
+    background: var(--brand-wash); border: 1px solid var(--line-strong); border-inline-start: 4px solid var(--brand);
+    border-radius: 10px; padding: 22px 26px; display: flex; align-items: center; justify-content: space-between; gap: 18px 28px; flex-wrap: wrap;
+  }
+  .companion-card h4 { font-size: 16px; font-weight: 700; color: var(--ink); margin: 0 0 6px; }
+  .companion-card p { font-size: 14.2px; line-height: 1.65; color: var(--ink-soft); margin: 0; }
+  .companion-card .companion-text { flex: 1 1 420px; }
+  .companion-card .card-btn { flex: 0 0 auto; }
+  @media (max-width: 640px) { .companion-card .card-btn { flex: 1 1 100%; } }
   .info-section {
     max-width: 900px; margin: 64px auto 0; padding: 26px 30px;
     background: var(--paper-raised); border: 1px solid var(--line); border-radius: 10px;
@@ -340,6 +350,16 @@ figure > figcaption {
     <div class="path-step"><div class="path-dot"><span>3</span></div><div class="path-name">מדריך 3</div></div>
     <div class="path-line"></div>
     <div class="path-step tool"><div class="path-dot"><span>✓</span></div><div class="path-name">צ'קליסט</div></div>
+  </div>
+</div>
+
+<div class="companion-section">
+  <div class="companion-card">
+    <div class="companion-text">
+      <h4>רוצים ש-<bdi dir="ltr">Claude</bdi> ילווה אתכם במעבר?</h4>
+      <p>בתחילת מדריך 1 יש כפתור שמעתיק פרומפט ל-<bdi dir="ltr">Claude</bdi>. <bdi dir="ltr">Claude</bdi> יבנה לכם תוכנית מעבר אישית וילווה אתכם שלב אחר שלב, לפי המדריכים. המדריכים נשארים הבסיס, והמלווה הוא תוספת.</p>
+    </div>
+    <a class="card-btn" href="guide-1.html#companion">למלווה בתחילת מדריך 1</a>
   </div>
 </div>
 
